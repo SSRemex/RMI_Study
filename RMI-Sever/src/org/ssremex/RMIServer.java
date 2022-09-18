@@ -11,7 +11,7 @@ public class RMIServer {
         RemoteObject remoteObject = new RemoteObject();
         // 创建注册中心 固定端口
         Registry r = LocateRegistry.createRegistry(1099);
-        r.bind("remoteObject", remoteObject);
+        r.rebind("remoteObject", remoteObject);
     }
 
 }
